@@ -33,10 +33,12 @@ h2{font-family:Fraunces,Georgia,serif;font-size:clamp(22px,3vw,34px);line-height
 .chef{display:grid;grid-template-columns:1fr;gap:16px;justify-items:center;text-align:center}.chef img{width:min(280px,72vw);aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:18px;border:3px solid var(--salmon)}.chef h3{font-family:Fraunces,Georgia,serif;margin:0 0 6px;font-size:22px;color:#fff}.chef p{margin:0;opacity:.8;font-size:14px}
 .strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(110px,1fr);gap:8px;overflow-x:auto}.strip .it{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}.strip img{width:100%;aspect-ratio:1}.strip p{margin:0;padding:6px;font-size:11px;font-weight:700}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.box.hi{border-color:var(--salmon);background:#FFF5F2}.box small{color:var(--muted);font-size:11px;text-transform:uppercase}.box b{display:block;font-family:Fraunces,Georgia,serif;font-size:22px;margin-top:4px}
+.vids{display:grid;gap:12px}.vid{position:relative;display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000}.vid img{width:100%;aspect-ratio:16/9}.vid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;background:linear-gradient(transparent 40%,rgba(15,34,51,.7))}.vid .play b{position:absolute;left:12px;bottom:10px;font-size:13px}
+.tgrid{display:grid;gap:12px}.tcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.tcard img{width:100%;aspect-ratio:4/3}.tcard .b{padding:12px 14px}.tcard q{display:block;font-weight:700;font-size:14px}.tcard small{color:var(--muted);font-size:12px}
 .cta-row{display:flex;flex-direction:column;align-items:flex-start}
 .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(247,243,236,.96);border-top:1px solid var(--line);padding:10px 0 calc(10px + env(safe-area-inset-bottom))}.sticky .inner{display:flex;gap:12px;align-items:center}.sticky .n{font-family:Fraunces,Georgia,serif;color:var(--salmon);font-size:20px;margin:0}.sticky .p{font-size:11px;color:var(--muted);margin:0}.sticky .btn{width:auto;max-width:none;white-space:nowrap}
 footer{text-align:center;padding:28px var(--g);font-size:13px;color:var(--muted)}
-@media(min-width:700px){.hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:center}.hero-shot{display:block;margin-top:0}.vgrid{grid-template-columns:1fr 1fr 1fr}.chef{grid-template-columns:240px 1fr;gap:28px;justify-items:start;text-align:left}.chef img{width:240px}.btn{width:auto;min-width:240px}.cta-row{flex-direction:row;gap:10px}.cta-row .ghost{margin-top:0}.strip{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);overflow:visible}}
+@media(min-width:700px){.hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:center}.hero-shot{display:block;margin-top:0}.vgrid{grid-template-columns:1fr 1fr 1fr}.chef{grid-template-columns:240px 1fr;gap:28px;justify-items:start;text-align:left}.chef img{width:240px}.btn{width:auto;min-width:240px}.cta-row{flex-direction:row;gap:10px}.cta-row .ghost{margin-top:0}.strip{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);overflow:visible}.vids,.tgrid{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:379px){.icons,.compare{grid-template-columns:1fr}.tag{display:none}}
 </style>
 </head>
@@ -50,13 +52,13 @@ footer{text-align:center;padding:28px var(--g);font-size:13px;color:var(--muted)
 <div class="price">Paket 10 e-book <b>Rp147.000</b></div>
 <a class="btn" href="#wa">Ambil paketnya</a>
 </div>
-<figure class="hero-shot"><img src="img-ibu-anak.jpg" width="1176" height="784" alt="Ibu mendampingi anak di dapur rumah"></figure>
+<figure class="hero-shot"><img src="img-ibu-anak.jpg" alt="Ibu dan anak"></figure>
 </div></section>
 <section class="block alt"><div class="inner">
 <p class="kicker">Kenapa dari rumah</p>
 <h2>Kerja di luar, rumah siapa yang jaga?</h2>
 <div class="vgrid">
-<article class="vcard"><img src="img-ibu-anak.jpg" alt=""><span>Anak & suami tetap keurus</span></article>
+<article class="vcard"><img src="img-ibu-anak.jpg" alt=""><span>Anak &amp; suami tetap keurus</span></article>
 <article class="vcard"><img src="img-po-rumah.jpg" alt=""><span>PO kecil. Mulai dari rumah</span></article>
 <article class="vcard"><img src="img-tiga-bowl.jpg" alt=""><span>Bingung jual apa? Ini jawabannya</span></article>
 </div></div></section>
@@ -68,13 +70,32 @@ footer{text-align:center;padding:28px var(--g);font-size:13px;color:var(--muted)
 <div class="icon"><div class="g">💰</div><p>Harga jual rekomendasi</p></div>
 <div class="icon"><div class="g">📦</div><p>Saran packing</p></div>
 </div>
-<figure class="wide"><img src="img-tiga-bowl.jpg" alt="Tiga menu siap jual" loading="lazy"></figure>
+<figure class="wide"><img src="img-tiga-bowl.jpg" alt="" loading="lazy"></figure>
 <p class="cap">Satu skill goreng. Ganti saus. Uji 5–10 porsi.</p>
 </div></section>
 <section class="block navy"><div class="inner"><div class="chef">
 <img src="img-chef-portrait.jpg" alt="Chef Kangsu" loading="lazy">
 <div><p class="kicker">Yang membimbing</p><h3>Chef Kangsu</h3><p>±15 tahun dapur resto Jepang. Dibagikan buat pejuang seperti Anda.</p></div>
 </div></div></section>
+<section class="block alt" id="preview"><div class="inner">
+<p class="kicker">Preview kelas</p>
+<h2>Lihat dulu cara Chef masak.</h2>
+<div class="vids">
+<a class="vid" href="https://youtu.be/Bx3yiIfIpog" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/Bx3yiIfIpog/hqdefault.jpg" alt="Katsu" loading="lazy"><span class="play">▶<b>Chicken Katsu</b></span></a>
+<a class="vid" href="https://youtu.be/Y3JuRCW8Gdw" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/Y3JuRCW8Gdw/hqdefault.jpg" alt="Teriyaki" loading="lazy"><span class="play">▶<b>Chicken Teriyaki</b></span></a>
+<a class="vid" href="https://youtu.be/ggbMmqj-Byg" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/ggbMmqj-Byg/hqdefault.jpg" alt="Korea" loading="lazy"><span class="play">▶<b>Ayam Goreng Korea</b></span></a>
+</div>
+<p class="cap">Cuplikan YouTube Chef Kangsu. Resep + modal lengkap di e-book.</p>
+</div></section>
+<section class="block" id="testimoni"><div class="inner">
+<p class="kicker">Yang dirasakan murid</p>
+<h2>Bukan teori. Langsung ke dapur.</h2>
+<div class="tgrid">
+<article class="tcard"><img src="img-testi-1.jpg" alt="" loading="lazy"><div class="b"><q>“Akhirnya berani PO kecil. Anak tetap di rumah.”</q><small>Murid kelas · ibu rumah tangga</small></div></article>
+<article class="tcard"><img src="img-testi-2.jpg" alt="" loading="lazy"><div class="b"><q>“Modalnya kelihatan. Jadi tidak nebak-nebak.”</q><small>Murid kelas · jualan rumahan</small></div></article>
+<article class="tcard"><img src="img-testi-3.jpg" alt="" loading="lazy"><div class="b"><q>“Satu skill goreng, sausnya yang diganti.”</q><small>Murid kelas · pemula</small></div></article>
+</div>
+</div></section>
 <section class="block" id="produk"><div class="inner">
 <p class="kicker">10 e-book</p><h2>Aneka rasa. Siap PO.</h2>
 <div class="strip">
